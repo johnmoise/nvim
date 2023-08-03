@@ -5,3 +5,4 @@ require('keys') -- keymaps
 require('opts') -- options
 require('plug') -- plugins
 require('vars') -- variables
+

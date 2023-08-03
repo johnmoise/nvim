@@ -28,4 +28,7 @@ opt.splitbelow = true
 -- VISUAL
 opt.cursorline = true
 opt.textwidth = 80
-opt.colorcolumn = "+1"
+-- opt.colorcolumn = "+1"
+-- NETRW
+-- vim.g.netrw_banner = 0
+opt.showmode = false

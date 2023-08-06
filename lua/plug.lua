@@ -23,30 +23,22 @@ end
 
 require('packer').startup(function(use)
     use("wbthomason/packer.nvim")
+    -- functionality plugins
     use("tpope/vim-surround")
     use("tpope/vim-commentary")
-    use("itchyny/lightline.vim")
-    use("morhetz/gruvbox")
-    use("rebelot/kanagawa.nvim")
-    use("shaunsingh/nord.nvim")
-    use("ap/vim-css-color")
-    use("folke/zen-mode.nvim")
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.2',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use('nvim-treesitter/nvim-treesitter',{run=':TSUpdate'})
+    use("theprimeagen/harpoon")
+    -- appearance plugins
+    use("shaunsingh/nord.nvim")
+    use("itchyny/lightline.vim")
+    use("ap/vim-css-color")
+    use("folke/zen-mode.nvim")
     if packer_bootstrap then
 		require("packer").sync()
 	end
 end)
-
--- plugin settings
--- vim.cmd([[colorscheme gruvbox]])
-vim.cmd([[colorscheme nord]])
--- vim.cmd([[colorscheme kanagawa-wave]])
-vim.cmd([[let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }]])
-
-vim.g.surround_36 = "$$\r$$" -- double $ on surround for mathjax
 
